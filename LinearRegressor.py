@@ -12,10 +12,10 @@ plt.ylabel('y')
 plt.axis([0, 2, 0, 15])
 plt.show()
 x_new = np.array([[0], [2]])
+x_b = np.c_[np.ones((100, 1)), x]
 
 # Without using sklearn
 # Solving the normal equation
-x_b = np.c_[np.ones((100, 1)), x]
 theta_best = np.linalg.inv(x_b.T.dot(x_b)).dot(x_b.T).dot(y)
 print(theta_best)
 
