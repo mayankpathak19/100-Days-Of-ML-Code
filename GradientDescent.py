@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.linear_model import SGDRegressor
 
 
 # Generating the data and plotting it
@@ -72,7 +73,6 @@ plt.show()
 """
 Stochastic Gradient Descent with sklearn
 """
-from sklearn.linear_model import SGDRegressor
 
 
 model = SGDRegressor(n_iter=50, penalty=None, eta0=0.01)
